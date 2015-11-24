@@ -10,6 +10,18 @@
             #key {
                 font-size: xx-large;
             }
+            .keychange {
+                animation-duration: 1s;
+                animation-name: keychange;
+            }
+            @keyframes keychange {
+                from {
+                    font-size: small;
+                }
+                to {
+                    font-size: xx-large;
+                }
+            }
         </style>
     </head>
     <body>
@@ -19,6 +31,12 @@
                 var keyboardCharacter = String.fromCharCode(e.keyCode);
                 console.log("pressed " + keyboardCharacter);
                 document.getElementById("key").textContent = keyboardCharacter;
+
+                // HACK restart animation https://css-tricks.com/restart-css-animation/
+                var element = document.getElementById("key");
+                element.classList.remove("keychange");
+                element.offsetWidth = element.offsetWidth;
+                element.classList.add("keychange");
             });
         </script>
     </body>
