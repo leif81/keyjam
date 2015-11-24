@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Key Boy</title>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #key {
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="key"></div>
+        <script type="text/javascript">
+            document.addEventListener("keydown",function(e) {
+                var keyboardCharacter = String.fromCharCode(e.keyCode);
+                console.log("pressed " + keyboardCharacter);
+                document.getElementById("key").textContent = keyboardCharacter;
+            });
+        </script>
+    </body>
+</html>
