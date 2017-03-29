@@ -24,6 +24,12 @@
     <body>
         <div id="key"></div>
         <script type="text/javascript">
+
+            // Steal mouse cursor to avoid losing window focus when playing.
+            document.addEventListener("click", function(e) {
+                e.target.requestPointerLock();
+            });
+
             document.addEventListener("keydown",function(e) {
                 var keyboardCharacter = e.key;
                 console.log("pressed " + keyboardCharacter);
