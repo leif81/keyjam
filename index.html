@@ -25,7 +25,7 @@
         <div id="key"></div>
         <script type="text/javascript">
             document.addEventListener("keydown",function(e) {
-                var keyboardCharacter = String.fromCharCode(e.keyCode);
+                var keyboardCharacter = e.key;
                 console.log("pressed " + keyboardCharacter);
                 document.getElementById("key").textContent = keyboardCharacter;
 
