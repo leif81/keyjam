@@ -31,7 +31,7 @@
             });
 
             document.addEventListener("keydown",function(e) {
-                var keyboardCharacter = e.key;
+                var keyboardCharacter = e.key.toUpperCase();
                 console.log("pressed " + keyboardCharacter);
                 document.getElementById("key").textContent = keyboardCharacter;
 
