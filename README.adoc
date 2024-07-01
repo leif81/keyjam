@@ -4,4 +4,4 @@ For entertaining toddlers who like to jam on keyboards.
 
 = Demo =
 
-https://rawgit.com/leif81/keyjam/master/index.html[Try it].
+https://leif81.github.io/keyjam/master/index.html[Try it].
